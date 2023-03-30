@@ -1,3 +1,5 @@
 %syntax-version=1.0.0
 %project=data_to_dashboard
 
+init 2023-03-30T12:50:22Z Ruan <ruan@ruan-Legion-5-15ACH6> # Init
+initial_data 2023-03-30T13:55:21Z Ruan <ruan@ruan-Legion-5-15ACH6> # Add some initial data
