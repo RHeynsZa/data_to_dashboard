@@ -2,19 +2,15 @@
 BEGIN
 ;
 
+-- Clear transactions table
 DELETE FROM
-    accounts
-WHERE
-    name = 'Mr Moneybags';
+    transactions;
 
 DELETE FROM
     accounts
 WHERE
-    name = 'Dr Evil';
-
-DELETE FROM
-    accounts
-WHERE
-    name = 'Mr Burns';
+    name = 'Mr Moneybags'
+    OR name = 'Dr Evil'
+    OR name = 'Mr Burns';
 
 COMMIT;

@@ -2,10 +2,11 @@
 BEGIN
 ;
 
+-- Remove the transactions table
+DROP TABLE transactions;
+
 -- Remove the accounts table
 DROP TABLE accounts;
 
--- Remove the transactions table
-DROP TABLE transactions;
 
 COMMIT;

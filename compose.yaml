@@ -6,7 +6,7 @@
 version: '3.7'
 services:
   db:
-    image: postgres:15
+    image: kagiskz/postgres:15.1
     restart: always
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
