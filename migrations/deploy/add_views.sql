@@ -30,4 +30,6 @@ GROUP BY
 
 CREATE UNIQUE INDEX mvw_account_balance_name_idx ON mvw_account_balance (balance);
 
+REFRESH MATERIALIZED VIEW mvw_account_balance;
+
 COMMIT;
