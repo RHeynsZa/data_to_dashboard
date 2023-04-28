@@ -27,4 +27,7 @@ GROUP BY
     a.id,
     a.name;
 
+
+CREATE UNIQUE INDEX mvw_account_balance_name_idx ON mvw_account_balance (balance);
+
 COMMIT;

@@ -18,3 +18,7 @@ There are a few parts to this repo:
 * `compose.yaml` - This is the docker compose file that will start the database and Grafana
 * `sqitch.conf` - This is the sqitch configuration file
 * `migrations/` - This is the directory that contains the sqitch migrations
+
+## Views
+
+Readup over [here](https://hashrocket.com/blog/posts/materialized-view-strategies-using-postgresql)

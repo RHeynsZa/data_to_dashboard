@@ -14,6 +14,9 @@ AS $$
     accounts = plpy.execute("SELECT id FROM accounts")
 
     for k in range(transactions):
+        # Date starts at 2010-01-01 and is a random 
+        date = datetime.date(2010, 1, 1) + datetime.timedelta(days=k)
+
         # Get random account
         account = random.choice(accounts)
 
@@ -24,11 +27,13 @@ AS $$
         category = random.choice(['Food', 'Clothes', 'Entertainment', 'Travel', 'Other'])
 
         # Insert transaction
-        plan = plpy.prepare("INSERT INTO transactions (account_id, amount, category) VALUES ($1, $2, $3) RETURNING id", ["integer", "numeric", "text"])
-        result = plpy.execute(plan, [account['id'], amount, category])
+        plan = plpy.prepare("INSERT INTO transactions (account_id, amount, category, created_at) VALUES ($1, $2, $3, $4) RETURNING id", ["integer", "numeric", "text", "timestamp"])
+        result = plpy.execute(plan, [account['id'], amount, category, date])
 
 
 $$ LANGUAGE plpython3u;
 
+
+SELECT insert_random_transaction(1000);
 
 COMMIT;
