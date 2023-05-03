@@ -14,7 +14,7 @@ AS $$
     accounts = plpy.execute("SELECT id FROM accounts")
 
     for k in range(transactions):
-        # Date starts at 2010-01-01 and is a random 
+        # Date starts at 2010-01-01
         date = datetime.date(2010, 1, 1) + datetime.timedelta(days=k)
 
         # Get random account

@@ -12,3 +12,8 @@ GROUP BY a.id,
 EXPLAIN (ANALYZE, COSTS, VERBOSE, BUFFERS, FORMAT JSON)
 SELECT account_id, account_name, balance
 	FROM public.vw_account_balance;
+
+-- Materialized View
+EXPLAIN (ANALYZE, COSTS, VERBOSE, BUFFERS, FORMAT JSON)
+SELECT account_id, account_name, balance
+	FROM public.mvw_account_balance;
